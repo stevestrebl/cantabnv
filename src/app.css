@@ -1,0 +1,145 @@
+/* Cambridge Alumni Society of Nevada – Alumni / Cambridge palette */
+:root {
+	/* Primary palette */
+	--amOffBlack: #111f22;
+	--camDarkBlue: #133844;
+	--amBold: #006a71;
+	--amMain: #9ac1b8;
+	--amLight: #dfebe8;
+	--amOffWhite: #f3f7f5;
+
+	/* Semantic */
+	--color-bg: var(--amOffWhite);
+	--color-surface: #fff;
+	--color-text: var(--amOffBlack);
+	--color-text-muted: var(--camDarkBlue);
+	--color-accent: var(--amMain);
+	--color-accent-hover: var(--amBold);
+	--color-highlight: var(--amBold);
+	--color-highlight-hover: #005a60;
+	--color-border: var(--amLight);
+	--color-nav-bg: #fff;
+	--color-nav-text: var(--amOffBlack);
+	--color-footer-bg: var(--camDarkBlue);
+	--color-footer-text: var(--amOffWhite);
+	--color-footer-link: var(--amMain);
+	--color-footer-link-hover: var(--amLight);
+
+	/* Aliases for components */
+	--color-gold: var(--amBold);
+	--color-gold-hover: var(--color-highlight-hover);
+	--color-gold-light: rgba(0, 106, 113, 0.12);
+	--color-cambridge-blue: var(--amMain);
+	--color-cambridge-blue-hover: var(--amBold);
+	--color-navy: var(--amOffBlack);
+	--color-navy-muted: var(--camDarkBlue);
+	--color-off-white: var(--amOffWhite);
+
+	/* Typography */
+	--font-sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+	--font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+	/* Spacing – generous whitespace */
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2rem;
+	--space-2xl: 3rem;
+	--space-3xl: 4rem;
+	--max-width: 720px;
+	--header-height: 5rem;
+	--radius: 6px;
+	--radius-lg: 8px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	font-size: 1rem;
+	line-height: 1.65;
+	color: var(--color-text);
+	background: var(--color-bg);
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: var(--space-2xl) var(--space-md);
+	min-height: calc(100vh - var(--header-height) - 140px);
+}
+
+a {
+	color: var(--color-accent);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: var(--color-accent-hover);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-serif);
+	font-weight: 600;
+	line-height: 1.25;
+	margin-top: 0;
+	color: var(--amOffBlack);
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-bottom: var(--space-lg);
+	letter-spacing: -0.02em;
+}
+h2 {
+	font-size: 1.4rem;
+	margin-bottom: var(--space-md);
+}
+h3 {
+	font-size: 1.15rem;
+	margin-bottom: var(--space-xs);
+}
+
+p {
+	margin: 0 0 var(--space-md);
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+/* Button-like CTAs and primary actions */
+.cta,
+.btn-primary {
+	display: inline-block;
+	padding: var(--space-sm) var(--space-lg);
+	background: var(--amBold);
+	color: var(--amOffWhite);
+	font-weight: 600;
+	font-size: 0.95rem;
+	border-radius: var(--radius);
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	font-family: var(--font-sans);
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
+}
+
+.cta:hover,
+.btn-primary:hover:not(:disabled) {
+	background: var(--color-highlight-hover);
+	color: var(--amOffWhite);
+	text-decoration: none;
+}

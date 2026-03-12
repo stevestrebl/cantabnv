@@ -27,7 +27,7 @@ The project is open source under the **GNU GPL v3 license**.
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/<org-or-user>/cantabnv.git
+git clone https://github.com/stevestrebl/cantabnv.git
 cd cantabnv
 ```
 
@@ -73,10 +73,10 @@ cantabnv/
 Key directories:
 
 **`src/routes`**
-Defines pages of the site using the SvelteKit routing system.
+Defines pages: `/` (home), `/events`, `/about`, `/join`. The Join page embeds a Google Form for signup and contact.
 
 **`src/lib`**
-Reusable components and shared UI.
+Reusable components (`Header.svelte`, `Footer.svelte`), events data (`events.ts`), and shared assets.
 
 **`static`**
 Images, icons, and other public assets.
@@ -115,7 +115,7 @@ Preview the build locally:
 npm run preview
 ```
 
-Deployment depends on the chosen SvelteKit adapter.
+Deployment (e.g. on [Vercel](https://vercel.com)) uses the default adapter.
 
 ---
 
