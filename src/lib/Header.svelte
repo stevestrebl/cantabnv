@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { resolve } from '$app/paths';
-	import logo from '$lib/assets/cantabnv_logo.png';
+	import logo from '$lib/assets/cantabnv_logo.jpg';
 
 	let navOpen = $state(false);
 
