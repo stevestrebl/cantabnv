@@ -8,6 +8,8 @@ export interface Event {
 	location: string;
 	description: string;
 	slug?: string;
+	/** Optional link to a map or venue page */
+	mapUrl?: string;
 }
 
 export const events: Event[] = [
@@ -17,6 +19,15 @@ export const events: Event[] = [
 		location: 'Las Vegas',
 		description: 'Inaugural meeting of the Cambridge Alumni Society of Nevada.',
 		slug: 'inaugural-2026'
+	},
+	{
+		title: 'Working open meeting of the Founding committee',
+		date: '2026-05-09',
+		location: 'Mothership Coffee — The Bend',
+		description:
+			'Open working meeting of the founding committee. All interested alumni are welcome.',
+		slug: 'founding-committee-2026-05',
+		mapUrl: 'https://maps.app.goo.gl/MqeuJcVJmkLGarYJ8'
 	}
 ];
 

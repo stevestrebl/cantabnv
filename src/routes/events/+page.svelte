@@ -39,6 +39,11 @@
 					<h3>{event.title}</h3>
 					<p class="meta">{formatDate(event.date)} · {event.location}</p>
 					<p>{event.description}</p>
+					{#if event.mapUrl}
+						<p>
+							<a href={event.mapUrl} target="_blank" rel="noopener noreferrer">Directions (Google Maps)</a>
+						</p>
+					{/if}
 				</li>
 			{/each}
 		</ul>
@@ -54,6 +59,11 @@
 					<h3>{event.title}</h3>
 					<p class="meta">{formatDate(event.date)} · {event.location}</p>
 					<p>{event.description}</p>
+					{#if event.mapUrl}
+						<p>
+							<a href={event.mapUrl} target="_blank" rel="noopener noreferrer">Directions (Google Maps)</a>
+						</p>
+					{/if}
 				</li>
 			{/each}
 		</ul>
