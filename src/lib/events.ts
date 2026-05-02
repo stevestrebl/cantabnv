@@ -10,6 +10,8 @@ export interface Event {
 	slug?: string;
 	/** Optional link to a map or venue page */
 	mapUrl?: string;
+	/** Optional local start time shown after the date */
+	time?: string;
 }
 
 export const events: Event[] = [
@@ -26,6 +28,7 @@ export const events: Event[] = [
 		location: 'Mothership Coffee — The Bend',
 		description:
 			'Open working meeting of the founding committee. All interested alumni are welcome.',
+		time: '10am',
 		slug: 'founding-committee-2026-05',
 		mapUrl: 'https://maps.app.goo.gl/MqeuJcVJmkLGarYJ8'
 	}

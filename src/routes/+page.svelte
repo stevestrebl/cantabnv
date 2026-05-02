@@ -24,12 +24,13 @@
 <p>Stay in the loop with upcoming events and society news—no membership fee required.</p>
 
 {#if upcomingEvents().length > 0}
+	{@const next = upcomingEvents()[0]}
 	<section class="teaser">
 		<h2>Next up</h2>
 		<p>
-			<a href={resolve('/events')}>{upcomingEvents()[0].title}</a>
-			— {new Date(upcomingEvents()[0].date).toLocaleDateString('en-US', { dateStyle: 'long' })} in {upcomingEvents()[0]
-				.location}.
+			<a href={resolve('/events')}>{next.title}</a>
+			— {new Date(next.date).toLocaleDateString('en-US', { dateStyle: 'long' })}{#if next.time}
+				· {next.time}{/if} in {next.location}.
 		</p>
 		<p>
 			<a href={resolve('/events')} class="cta">See all events →</a>
