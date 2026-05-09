@@ -2,6 +2,8 @@
  * Events data for the Cambridge Alumni Society of Nevada.
  * Edit this file to add or update events; the Events page will reflect changes.
  */
+import { pacificCalendarToday } from '$lib/pacific-date';
+
 export interface Event {
 	title: string;
 	date: string;
@@ -47,12 +49,12 @@ export const events: Event[] = [
 	}
 ];
 
-const now = new Date().toISOString().slice(0, 10);
-
 export function upcomingEvents(): Event[] {
+	const now = pacificCalendarToday();
 	return events.filter((e) => !e.past && e.date >= now);
 }
 
 export function pastEvents(): Event[] {
+	const now = pacificCalendarToday();
 	return events.filter((e) => e.past === true || e.date < now);
 }

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { upcomingEvents } from '$lib/events';
+	import { formatPacificCalendarDateLong } from '$lib/pacific-date';
 </script>
 
 <svelte:head>
@@ -29,7 +30,7 @@
 		<h2>Next up</h2>
 		<p>
 			<a href={resolve('/events')}>{next.title}</a>
-			— {new Date(next.date).toLocaleDateString('en-US', { dateStyle: 'long' })}{#if next.time}
+			— {formatPacificCalendarDateLong(next.date)}{#if next.time}
 				· {next.time}{/if} in {next.location}.
 		</p>
 		<p>
