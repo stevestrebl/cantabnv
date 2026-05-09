@@ -31,6 +31,16 @@ export const events: Event[] = [
 		time: '10am',
 		slug: 'founding-committee-2026-05',
 		mapUrl: 'https://maps.app.goo.gl/MqeuJcVJmkLGarYJ8'
+	},
+	{
+		title: 'Lunch',
+		date: '2026-05-21',
+		location: 'Town Square',
+		description: 'Meet outside the front entrance of Brio.',
+		time: '11am–1pm',
+		slug: 'lunch-town-square-2026-05',
+		mapUrl:
+			'https://www.google.com/maps/search/?api=1&query=Brio+Italian+Grille+6653+Las+Vegas+Blvd+S'
 	}
 ];
 
