@@ -12,6 +12,8 @@ export interface Event {
 	mapUrl?: string;
 	/** Optional local start time shown after the date */
 	time?: string;
+	/** When true, list only under past events (allows same-day or manual archival). */
+	past?: boolean;
 }
 
 export const events: Event[] = [
@@ -30,7 +32,8 @@ export const events: Event[] = [
 			'Open working meeting of the founding committee. All interested alumni are welcome.',
 		time: '10am',
 		slug: 'founding-committee-2026-05',
-		mapUrl: 'https://maps.app.goo.gl/MqeuJcVJmkLGarYJ8'
+		mapUrl: 'https://maps.app.goo.gl/MqeuJcVJmkLGarYJ8',
+		past: true
 	},
 	{
 		title: 'Lunch',
@@ -47,9 +50,9 @@ export const events: Event[] = [
 const now = new Date().toISOString().slice(0, 10);
 
 export function upcomingEvents(): Event[] {
-	return events.filter((e) => e.date >= now);
+	return events.filter((e) => !e.past && e.date >= now);
 }
 
 export function pastEvents(): Event[] {
-	return events.filter((e) => e.date < now);
+	return events.filter((e) => e.past === true || e.date < now);
 }
